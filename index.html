@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#030a16">
+  <meta name="description" content="面向县域集中仓储中心的低空无人机库内盘点、账实差异闭环、库容运营与设备健康数字大屏。">
+  <meta property="og:title" content="低空无人机智能盘点数字孪生平台">
+  <meta property="og:description" content="实时掌握盘点覆盖、账实一致、差异闭环、库容效率与无人机机队状态。">
+  <meta property="og:image" content="./public/warehouse-digital-twin.png">
+  <title>沁水县县域集中仓储中心｜低空无人机智能盘点数字孪生平台</title>
+  <link rel="icon" href="./public/favicon.svg">
+  <link rel="stylesheet" href="./app/globals.css">
+</head>
+<body>
+  <main class="dashboard-shell">
+    <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+    <header class="topbar">
+      <div class="brand-block">
+        <div class="brand-mark"><span style="position:static;transform:rotate(-45deg);width:auto;height:auto;background:none;box-shadow:none;font-size:25px">▦</span><span></span></div>
+        <div><p>QINSHUI · SMART WAREHOUSE</p><strong>沁水县县域集中仓储中心</strong></div>
+      </div>
+      <div class="title-block">
+        <div class="title-wing left"></div>
+        <div><h1>低空无人机智能盘点数字孪生平台</h1><p>LOW-ALTITUDE AUTONOMOUS INVENTORY DIGITAL TWIN</p></div>
+        <div class="title-wing right"></div>
+      </div>
+      <div class="system-meta">
+        <div class="status-pill"><span></span> 系统运行正常</div>
+        <div class="date-block"><strong id="clock">--:--:--</strong><span id="calendar">----</span></div>
+      </div>
+    </header>
+
+    <section class="kpi-grid" aria-label="核心运营指标">
+      <article class="kpi-card tone-cyan"><div class="kpi-icon">◎</div><div class="kpi-copy"><span>本轮盘点覆盖率</span><strong>92.6<small>%</small></strong></div><div class="kpi-delta">↗ +6.8%</div><div class="tiny-bars tone-cyan"><i style="height:26%"></i><i style="height:40%"></i><i style="height:35%"></i><i style="height:58%"></i><i style="height:48%"></i><i style="height:72%"></i><i style="height:64%"></i><i style="height:82%"></i><i style="height:74%"></i><i style="height:92%"></i></div><b>01</b></article>
+      <article class="kpi-card tone-green"><div class="kpi-icon">✓</div><div class="kpi-copy"><span>账实一致率</span><strong>99.18<small>%</small></strong></div><div class="kpi-delta">↗ +0.26%</div><div class="tiny-bars tone-green"><i style="height:38%"></i><i style="height:42%"></i><i style="height:54%"></i><i style="height:48%"></i><i style="height:66%"></i><i style="height:72%"></i><i style="height:80%"></i><i style="height:87%"></i><i style="height:92%"></i><i style="height:96%"></i></div><b>02</b></article>
+      <article class="kpi-card tone-blue"><div class="kpi-icon">⌗</div><div class="kpi-copy"><span>今日识别库存</span><strong>12,486<small>件</small></strong></div><div class="kpi-delta">↗ 98.7%可信</div><div class="tiny-bars tone-blue"><i style="height:26%"></i><i style="height:40%"></i><i style="height:35%"></i><i style="height:58%"></i><i style="height:48%"></i><i style="height:72%"></i><i style="height:64%"></i><i style="height:82%"></i><i style="height:74%"></i><i style="height:92%"></i></div><b>03</b></article>
+      <article class="kpi-card tone-amber"><div class="kpi-icon">△</div><div class="kpi-copy"><span>待复核异常</span><strong>17<small>处</small></strong></div><div class="kpi-delta">↗ 11处已闭环</div><div class="tiny-bars tone-amber"><i style="height:22%"></i><i style="height:46%"></i><i style="height:35%"></i><i style="height:64%"></i><i style="height:42%"></i><i style="height:75%"></i><i style="height:58%"></i><i style="height:86%"></i><i style="height:62%"></i><i style="height:78%"></i></div><b>04</b></article>
+      <article class="kpi-card tone-purple"><div class="kpi-icon">◴</div><div class="kpi-copy"><span>单架盘点效率</span><strong>6,420<small>件/时</small></strong></div><div class="kpi-delta">↗ 人工 × 8.3</div><div class="tiny-bars tone-purple"><i style="height:34%"></i><i style="height:47%"></i><i style="height:40%"></i><i style="height:61%"></i><i style="height:70%"></i><i style="height:67%"></i><i style="height:80%"></i><i style="height:77%"></i><i style="height:88%"></i><i style="height:94%"></i></div><b>05</b></article>
+      <article class="kpi-card tone-cyan"><div class="kpi-icon">◷</div><div class="kpi-copy"><span>预计完成时间</span><strong>18:40</strong></div><div class="kpi-delta">↗ 提前 36 分钟</div><div class="tiny-bars tone-cyan"><i style="height:23%"></i><i style="height:38%"></i><i style="height:45%"></i><i style="height:42%"></i><i style="height:59%"></i><i style="height:66%"></i><i style="height:73%"></i><i style="height:78%"></i><i style="height:86%"></i><i style="height:92%"></i></div><b>06</b></article>
+    </section>
+
+    <section class="content-grid">
+      <aside class="side-column left-column">
+        <article class="panel mission-panel">
+          <div class="panel-title"><div class="panel-title-main"><span class="panel-icon">⌗</span><div><span>MISSION PROGRESS</span><h2>本轮盘点任务</h2></div></div><span class="live-tag"><i></i>实时执行</span></div>
+          <div class="mission-content">
+            <div class="progress-ring" style="--progress:333.36deg"><div><strong>92.6<small>%</small></strong><span>已完成</span></div></div>
+            <div class="mission-stats"><div><span>任务批次</span><strong>2026-10-08 / 03</strong></div><div><span>已盘库位</span><strong>1,286 <small>/ 1,389</small></strong></div><div><span>累计航程</span><strong>18.6 <small>km</small></strong></div><div><span>已执行时长</span><strong>03:42:16</strong></div></div>
+          </div>
+          <div class="value-strip"><span>⚡</span><span>预计节省人工盘点工时</span><strong>87%</strong><em>≈ 56 人时</em></div>
+        </article>
+        <article class="panel inventory-panel">
+          <div class="panel-title"><div class="panel-title-main"><span class="panel-icon">□</span><div><span>STOCK CAPACITY</span><h2>库存与库容</h2></div></div><span class="panel-number">18,642<small>件</small></span></div>
+          <div class="capacity-bar"><i style="width:78.4%"></i><span>库容使用率 78.4%</span><em>安全阈值 85%</em></div>
+          <div class="stock-grid"><div><span>在库SKU</span><strong>1,268</strong><small>较昨日 +24</small></div><div><span>托盘库位</span><strong>1,389</strong><small>可用 300</small></div><div><span>今日入库</span><strong>2,416</strong><small>件 / 18 批</small></div><div><span>今日出库</span><strong>1,982</strong><small>件 / 32 单</small></div></div>
+          <div class="category-list">
+            <div><span><i style="background:#2fe9ff"></i>粮油副食</span><div><i style="width:36%"></i></div><strong>6,711</strong></div>
+            <div><span><i style="background:#50f0a8"></i>农资农具</span><div><i style="width:27%"></i></div><strong>5,033</strong></div>
+            <div><span><i style="background:#7887ff"></i>冷链预包装</span><div><i style="width:21%"></i></div><strong>3,915</strong></div>
+            <div><span><i style="background:#ffbd52"></i>县域特色产品</span><div><i style="width:16%"></i></div><strong>2,983</strong></div>
+          </div>
+        </article>
+      </aside>
+
+      <section class="center-stage">
+        <article class="panel twin-panel">
+          <div class="twin-toolbar"><div class="view-tabs"><button class="active">全仓态势</button><button>库存热力</button><button>异常分布</button></div><div class="map-health">⌁ 数字孪生同步延迟 <strong>86 ms</strong></div></div>
+          <div class="twin-scene">
+            <img src="./public/warehouse-digital-twin.png" alt="仓储中心数字孪生俯视图，显示六个货架分区与两架盘点无人机">
+            <div class="scan-beam"></div>
+            <svg class="flight-route" viewBox="0 0 1000 470" preserveAspectRatio="none" aria-label="无人机盘点航线"><path d="M210 310 C250 210 335 200 370 295 S520 400 555 270 S690 155 748 235"></path><circle cx="210" cy="310" r="6"></circle><circle cx="370" cy="295" r="6"></circle><circle cx="555" cy="270" r="6"></circle><circle cx="748" cy="235" r="6"></circle></svg>
+            <div class="drone-label drone-one"><span>⌘</span><div><b>D-01 · 扫描中</b><small>C区 04巷 · 2.8m/s</small></div></div>
+            <div class="drone-label drone-two"><span>⌘</span><div><b>D-02 · 转场中</b><small>前往 D区 02巷</small></div></div>
+            <div class="dock-label">⚡ 自动充电坞 · 空闲</div><div class="location-label">⌖ 沁水县城东物流园</div><div class="coordinate">112.1846°E&nbsp;&nbsp;35.6982°N&nbsp;&nbsp;ALT 08.4m</div>
+          </div>
+          <div class="zone-console">
+            <div class="zone-buttons" role="group" aria-label="选择仓储分区">
+              <button style="--zone-color:var(--cyan)" data-zone="A" data-rate="100" data-state="已完成"><span>A 区</span><strong>100%</strong><small>已完成</small></button>
+              <button style="--zone-color:var(--green)" data-zone="B" data-rate="100" data-state="已完成"><span>B 区</span><strong>100%</strong><small>已完成</small></button>
+              <button class="active" style="--zone-color:var(--amber)" data-zone="C" data-rate="96" data-state="扫描中"><span>C 区</span><strong>96%</strong><small>扫描中</small></button>
+              <button style="--zone-color:var(--blue)" data-zone="D" data-rate="88" data-state="扫描中"><span>D 区</span><strong>88%</strong><small>扫描中</small></button>
+              <button style="--zone-color:#a76dff" data-zone="E" data-rate="72" data-state="待执行"><span>E 区</span><strong>72%</strong><small>待执行</small></button>
+              <button style="--zone-color:#ff526d" data-zone="F" data-rate="61" data-state="待执行"><span>F 区</span><strong>61%</strong><small>待执行</small></button>
+            </div>
+            <div class="selected-zone"><span>当前分区</span><strong id="selected-zone">C 区</strong><i></i><em id="selected-state">扫描中</em><small id="selected-rate">盘点完成 96%</small></div>
+          </div>
+        </article>
+      </section>
+
+      <aside class="side-column right-column">
+        <article class="panel exception-panel">
+          <div class="panel-title"><div class="panel-title-main"><span class="panel-icon">△</span><div><span>DIFFERENCE CONTROL</span><h2>盘点差异闭环</h2></div></div><span class="exception-total">17<small>处</small></span></div>
+          <div class="exception-flow"><div><span>AI发现</span><strong>17</strong><small>100%</small></div><b>›</b><div><span>人工复核</span><strong>14</strong><small>82%</small></div><b>›</b><div class="done"><span>已闭环</span><strong>11</strong><small>65%</small></div></div>
+          <div class="exception-types"><div><i class="red"></i><span>库位错放</span><strong>7</strong><em>3待处理</em></div><div><i class="amber"></i><span>账面有 / 实物无</span><strong>6</strong><em>2待处理</em></div><div><i class="blue"></i><span>实物有 / 账面无</span><strong>4</strong><em>1待处理</em></div></div>
+          <div class="closure-metrics"><div><span>平均闭环时长</span><strong>14.2<small>分钟</small></strong></div><div><span>预估避免损耗</span><strong>¥48,600</strong></div></div>
+        </article>
+        <article class="panel device-panel">
+          <div class="panel-title"><div class="panel-title-main"><span class="panel-icon">⌘</span><div><span>FLEET HEALTH</span><h2>无人机机队状态</h2></div></div><span class="online-count"><i></i>2 / 2 在线</span></div>
+          <div class="device-list">
+            <div class="device-row active"><div class="drone-glyph">⌘<i></i></div><div class="device-copy"><strong>D-01 <span>执行中</span></strong><small>C区 04巷 · 累计识别 7,284件</small><div><i style="width:81%"></i></div></div><div class="battery">⚡<strong>81%</strong><small>26 min</small></div></div>
+            <div class="device-row"><div class="drone-glyph">⌘<i></i></div><div class="device-copy"><strong>D-02 <span>转场中</span></strong><small>前往D区 · 累计识别 5,202件</small><div><i style="width:64%"></i></div></div><div class="battery">⚡<strong>64%</strong><small>18 min</small></div></div>
+          </div>
+          <div class="health-grid"><div><b>◈</b><span>边缘算力</span><strong>42%</strong></div><div><b>⌁</b><span>链路质量</span><strong>-48 dBm</strong></div><div><b>↻</b><span>航线重规划</span><strong>2 次</strong></div><div><b>▤</b><span>数据回传</span><strong>100%</strong></div></div>
+        </article>
+        <article class="panel alerts-panel">
+          <div class="panel-title"><div class="panel-title-main"><span class="panel-icon">✦</span><div><span>LIVE ALERTS</span><h2>实时异常事件</h2></div></div><button class="link-button">查看全部 ›</button></div>
+          <div class="alert-list"><div class="alert-item high"><time>16:42:18</time><i></i><div><strong>C-04-18 库位疑似错放</strong><span>识别到“晋谷小米”箱码与库位档案不一致</span></div></div><div class="alert-item medium"><time>16:38:06</time><i></i><div><strong>D-02 通道临时遮挡</strong><span>航线已自动绕行，任务延迟约 2 分钟</span></div></div><div class="alert-item medium"><time>16:31:44</time><i></i><div><strong>A-08-06 数量差异</strong><span>实盘 48 件 / 账面 50 件，已派发复核</span></div></div></div>
+        </article>
+      </aside>
+    </section>
+
+    <section class="bottom-grid">
+      <article class="panel trend-panel">
+        <div class="panel-title"><div class="panel-title-main"><span class="panel-icon">↗</span><div><span>EFFICIENCY TREND</span><h2>近7日盘点效率</h2></div></div><div class="chart-legend"><span><i></i>无人机盘点</span><span><i></i>人工基准</span></div></div>
+        <div class="trend-content"><div class="chart-y"><span>7k</span><span>5k</span><span>3k</span><span>1k</span></div><div class="line-chart"><div class="chart-grid"></div><svg viewBox="0 0 760 118" preserveAspectRatio="none" aria-label="近七日无人机盘点效率折线图"><defs><linearGradient id="area" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#20e8ff" stop-opacity=".32"></stop><stop offset="1" stop-color="#20e8ff" stop-opacity="0"></stop></linearGradient></defs><path class="area" d="M0 79 L126 70 L253 61 L380 68 L506 46 L633 35 L760 24 L760 118 L0 118 Z"></path><path class="robot-line" d="M0 79 L126 70 L253 61 L380 68 L506 46 L633 35 L760 24"></path><path class="human-line" d="M0 102 L126 99 L253 100 L380 96 L506 98 L633 94 L760 93"></path></svg><div class="chart-days"><span>10/02</span><span>10/03</span><span>10/04</span><span>10/05</span><span>10/06</span><span>10/07</span><span>今日</span></div></div><div class="trend-callout"><span>今日峰值</span><strong>6,842</strong><small>件 / 小时</small><em>较人工提升 731%</em></div></div>
+      </article>
+      <article class="panel log-panel">
+        <div class="panel-title"><div class="panel-title-main"><span class="panel-icon">▤</span><div><span>OPERATION STREAM</span><h2>实时作业流</h2></div></div><span class="live-tag"><i></i>LIVE</span></div>
+        <div class="log-list"><div class="log-row"><time>16:45:32</time><strong>D-01</strong><span>完成 C 区 04 巷道扫描</span><em>186 个标签</em></div><div class="log-row"><time>16:44:51</time><strong>D-02</strong><span>抵达 D 区 02 巷道</span><em>定位误差 4.2 cm</em></div><div class="log-row"><time>16:43:19</time><strong>系统</strong><span>生成异常复核工单 #FD-1028</span><em>优先级 P1</em></div><div class="log-row"><time>16:42:48</time><strong>D-01</strong><span>识别库位 C-04-18 异常</span><em>置信度 97.8%</em></div></div>
+      </article>
+      <article class="panel value-panel">
+        <div class="panel-title"><div class="panel-title-main"><span class="panel-icon">✓</span><div><span>OPERATION VALUE</span><h2>本月运营价值</h2></div></div></div>
+        <div class="value-tabs"><div class="value-tab-list"><button data-slot="tabs-trigger" data-tab="efficiency" data-active>提效</button><button data-slot="tabs-trigger" data-tab="quality">保质</button><button data-slot="tabs-trigger" data-tab="cost">降本</button></div><div class="value-tab-content" data-panel="efficiency"><strong>214.6</strong><small>节省人工工时</small><div><span>计划完成率</span><b>108.4%</b></div></div><div class="value-tab-content" data-panel="quality" hidden><strong>99.18%</strong><small>账实一致率</small><div><span>差异闭环率</span><b>96.2%</b></div></div><div class="value-tab-content" data-panel="cost" hidden><strong>¥12.8万</strong><small>累计避免损耗</small><div><span>盘点成本下降</span><b>73.5%</b></div></div></div>
+      </article>
+    </section>
+
+    <footer class="system-footer"><span><i></i>数据来源：WMS · RFID · 视觉识别 · 无人机飞控</span><span>屏幕基准 3268 × 1290</span><span>✓ 最后同步 <b id="last-sync">--:--:--</b></span></footer>
+  </main>
+  <script>
+    const clock = document.querySelector('#clock');
+    const calendar = document.querySelector('#calendar');
+    const sync = document.querySelector('#last-sync');
+    function updateTime(){const d=new Date();const t=d.toLocaleTimeString('zh-CN',{hour12:false});clock.textContent=t;sync.textContent=t;calendar.textContent=d.toLocaleDateString('zh-CN',{year:'numeric',month:'2-digit',day:'2-digit',weekday:'short'});} updateTime();setInterval(updateTime,1000);
+    document.querySelectorAll('.zone-buttons button').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('.zone-buttons button').forEach(item=>item.classList.remove('active'));button.classList.add('active');document.querySelector('#selected-zone').textContent=button.dataset.zone+' 区';document.querySelector('#selected-state').textContent=button.dataset.state;document.querySelector('#selected-rate').textContent='盘点完成 '+button.dataset.rate+'%';}));
+    document.querySelectorAll('[data-tab]').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('[data-tab]').forEach(item=>item.removeAttribute('data-active'));button.setAttribute('data-active','');document.querySelectorAll('[data-panel]').forEach(panel=>panel.hidden=panel.dataset.panel!==button.dataset.tab);}));
+    document.querySelectorAll('.view-tabs button').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('.view-tabs button').forEach(item=>item.classList.remove('active'));button.classList.add('active');}));
+  </script>
+</body>
+</html>
